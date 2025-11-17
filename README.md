@@ -31,3 +31,6 @@ Metrics (Accuracy, Precision, Recall, F1-score)
 3. Run training: `python src/model_trainer.py`
 4. Launch API: `uvicorn app.main:app --reload`
 5. Test with Postman or `curl`
+
+##  References
+DataTalksClub (2025), Machine Learning Zoomcamp Course Materials. Available at: https://github.com/DataTalksClub/machine-learning-zoomcamp.
