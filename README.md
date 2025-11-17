@@ -5,7 +5,7 @@ An end-to-end ML project for detecting fraudulent transactions using machine lea
 Built with Python, FastAPI, and Docker.
 
 ## Problem Description
-Financial institutions lose billions yearly to fraudulent transactions.
+Financial institutions lose billions yearly to fraudulent transactions. [bank transaction dataset] (https://www.kaggle.com/datasets/valakhorasani/bank-transaction-dataset-for-fraud-detection?resource=download)
 The goal of this project is to develop a machine learning model that identifies potentially fraudulent transactions using historical behavioral data.
 
 ## Features
