@@ -4,17 +4,28 @@
 An end-to-end ML project for detecting fraudulent transactions using machine learning.
 Built with Python, FastAPI, and Docker.
 
-## 🚀 Features
+## Problem Description
+Financial institutions lose billions yearly to fraudulent transactions.
+The goal of this project is to develop a machine learning model that identifies potentially fraudulent transactions using historical behavioral data.
+
+## Features
 - Data cleaning and preprocessing
 - Feature engineering
 - Model training and evaluation
 - REST API for real-time predictions
 - Docker containerization
 
-## 🧱 Project Structure
-(Include your folder tree here)
+## Notebook: Data Preparation & EDA
+Open the notebook:
+jupyter notebook notebook.ipynb
+The notebook includes:
+Data cleaning
+Exploratory data analysis
+Feature engineering
+Model comparisons
+Metrics (Accuracy, Precision, Recall, F1-score)
 
-## 🧠 How to Run
+## How to Run
 1. Create virtual environment  
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run training: `python src/model_trainer.py`
