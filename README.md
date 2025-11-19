@@ -26,6 +26,7 @@ Model comparisons
 Metrics (Accuracy, Precision, Recall, F1-score)
 
 ## How to Run
+Follow the steps below to set up and run the full pipeline on your local machine.
 1. Create virtual environment  
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run training: `python src/model_trainer.py`
