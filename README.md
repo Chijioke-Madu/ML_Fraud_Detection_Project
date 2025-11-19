@@ -8,6 +8,19 @@ Built with Python, FastAPI, and Docker.
 Financial institutions lose billions yearly to fraudulent transactions. __[bank transaction dataset](https://www.kaggle.com/datasets/valakhorasani/bank-transaction-dataset-for-fraud-detection?resource=download)__
 The goal of this project is to develop a machine learning model that identifies potentially fraudulent transactions using historical behavioral data.
 
+The system is designed to:
+
+- Load and preprocess raw transaction data  
+- Perform cleaning, handling missing values, and scaling numerical features  
+- Engineer additional predictive features based on user behavior and transaction patterns  
+- Train multiple machine learning models and compare their performance  
+- Automatically select and export the best-performing model  
+- Provide a fully functional **FastAPI web service** for real-time predictions  
+- Offer an optional Docker-based deployment workflow for portability
+
+This project demonstrates strong understanding of data processing, feature engineering, model training, backend model serving, and deployment fundamentals. The repository is structured to follow best-practice ML engineering principles, making it easy to extend, reproduce, and deploy.
+
+
 ## Features
 - Data cleaning and preprocessing
 - Feature engineering
