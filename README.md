@@ -46,26 +46,24 @@ A Docker container was created to ensure consistent execution regardless of the 
 
 ### Create a virtual environment
 
-i Recommended for clean dependency management
+I Recommended for Clean Dependency Management
 
 ```bash
 python -m venv venv
 ```
-
-
-ii Activate it:
 
 Windows
 
 ```bash
 venv\Scripts\activate
 ```
-
 Mac/Linux
 
+```bash
 source venv/bin/activate
+```
 
-iii Install dependencies
+## II Install Dependencies
 
 All project dependencies are listed in requirements.txt.
 
@@ -73,7 +71,7 @@ All project dependencies are listed in requirements.txt.
 pip install -r requirements.txt
 ```
 
-iv Run the training pipeline
+### III Run the training pipeline
 
 This script loads data, performs feature engineering, trains multiple models, selects the best one, and saves it as best_model.pkl.
 
