@@ -38,6 +38,35 @@ Feature engineering
 Model comparisons
 Metrics (Accuracy, Precision, Recall, F1-score)
 
+## Deployment
+
+To make the fraud-detection model accessible as a real-time prediction service, a FastAPI web application was developed. The service exposes a `/predict` endpoint that accepts transaction details and returns a fraud probability along with a classification (legitimate vs. fraudulent). The API documentation is automatically generated and available through Swagger UI.
+
+A Docker container was created to ensure consistent execution regardless of the host environment. This container bundles the trained model, preprocessing pipeline, all dependencies, and the FastAPI application.
+
+### Deployment Workflow
+
+The following steps were used to prepare, test, and deploy the service:
+
+1. **Implemented FastAPI application** for serving predictions  
+2. **Created a Dockerfile** to containerize the API  
+3. **Built and tested the Docker image locally** using Docker Desktop  
+4. (Optional) **Deployed the container to a cloud service**, such as Azure Container Apps, Render, or Railway  
+5. Validated the deployed endpoint using Swagger UI and test JSON payloads
+
+### Accessing the Service
+
+Once deployment is complete, the service can be accessed through:
+
+- **API Base URL:**  
+  *([API based url](http://127.0.0.1:8000/docs#/default))*
+  The API will return:
+  {
+  "fraud_prediction": 0 or 1,
+  "message": "Legitimate Transaction" or "Fraudulent Transaction Detected"
+}
+
+
 ## How to Run
 Follow the steps below to set up and run the full pipeline on your local machine.
 1. Create virtual environment  
