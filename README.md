@@ -44,6 +44,41 @@ To make the fraud-detection model accessible as a real-time prediction service, 
 
 A Docker container was created to ensure consistent execution regardless of the host environment. This container bundles the trained model, preprocessing pipeline, all dependencies, and the FastAPI application.
 
+### Create a virtual environment
+
+--- Recommended for clean dependency management
+
+```python -m venv venv```
+
+
+Activate it:
+
+Windows
+
+venv\Scripts\activate
+
+
+Mac/Linux
+
+source venv/bin/activate
+
+📥 3. Install dependencies
+
+All project dependencies are listed in requirements.txt.
+
+pip install -r requirements.txt
+
+📊 4. Run the training pipeline
+
+This script loads data, performs feature engineering, trains multiple models, selects the best one, and saves it as best_model.pkl.
+
+python test_model_trainer.py
+
+
+After running, your models/ folder will contain:
+
+best_model.pkl → best performing ML model
+
 ### Deployment Workflow
 
 The following steps were used to prepare, test, and deploy the service:
