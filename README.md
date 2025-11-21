@@ -46,38 +46,46 @@ A Docker container was created to ensure consistent execution regardless of the 
 
 ### Create a virtual environment
 
---- Recommended for clean dependency management
+i Recommended for clean dependency management
 
-```python -m venv venv```
+```bash
+python -m venv venv
+```
 
 
-Activate it:
+ii Activate it:
 
 Windows
 
+```bash
 venv\Scripts\activate
-
+```
 
 Mac/Linux
 
 source venv/bin/activate
 
-📥 3. Install dependencies
+iii Install dependencies
 
 All project dependencies are listed in requirements.txt.
 
+```bash
 pip install -r requirements.txt
+```
 
-📊 4. Run the training pipeline
+iv Run the training pipeline
 
 This script loads data, performs feature engineering, trains multiple models, selects the best one, and saves it as best_model.pkl.
 
+```bash
 python test_model_trainer.py
-
+```
 
 After running, your models/ folder will contain:
 
+```bash
 best_model.pkl → best performing ML model
+```
 
 ### Deployment Workflow
 
@@ -96,10 +104,40 @@ Once deployment is complete, the service can be accessed through:
 - **API Base URL:**  
   *([API based url](http://127.0.0.1:8000/docs#/default))*
   The API will return:
+
+  ```bash
   {
   "fraud_prediction": 0 or 1,
   "message": "Legitimate Transaction" or "Fraudulent Transaction Detected"
+  }
+  ```
+
+Start the prediction API (FastAPI)
+
+From the project root:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Once the server starts, you can visit:
+
+```bash
+Swagger UI: http://127.0.0.1:8000/docs
+```
+Prediction endpoint: /predict
+
+Example JSON payload:
+
+```bash
+{
+  "TransactionAmount": 250.0,
+  "CustomerAge": 45,
+  "LoginAttempts": 2,
+  "TransactionDuration": 15.3,
+  "AccountBalance": 1200.5
 }
+```
 
 
 ## How to Run
