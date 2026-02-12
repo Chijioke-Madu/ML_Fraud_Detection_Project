@@ -1,5 +1,5 @@
 
-# Bank Transaction Fraud Detection
+# Learners Fraud Detection
 
 An end-to-end ML project for detecting fraudulent transactions using machine learning.
 Built with Python, FastAPI, and Docker.
